@@ -1,9 +1,9 @@
-BiocManager::install("SingleR")
-install.packages('devtools')
-devtools::install_github('immunogenomics/presto')
-install.packages("remotes")
-BiocManager::install("ComplexHeatmap")
-remotes::install_github("sqjin/CellChat")
+#BINF 6110
+#Assignment 4: Single cell Transcriptomics
+#Submitted by Iroayo Toki
+#April 13th, 2026
+#---------------------
+#Packages Used
 library(dplyr)
 library(Seurat)
 library(celldex)
@@ -93,7 +93,7 @@ markers <- FindAllMarkers(
 )
 saveRDS(markers, "SCseqmarkers.rds")
 
-# Alternatively Load in markers
+# Alternatively Load in markers from rds
 markers <- readRDS("SCseqmarkers.rds")
 
 #Top 5 markers per cluster based on LFC filtered P value
@@ -125,8 +125,8 @@ table(Seurat_obj$organ_custom)
 # Feature plots of identifier genes from the markers dataframe
 head(rownames(markers[markers$cluster == 25, ]), n = 5)
 
-FeaturePlot(Seurat_obj, features = c("Cyp2g1",  "Sec14l3", "Cyp1a2", "Muc2", "Agr3"))
-
+FeaturePlot(Seurat_obj, features = c("Cyp2g1",  "Sec14l3"))
+FeaturePlot(Seurat_obj, features = c("Cyp1a2", "Muc2"))
 
 
 #Differential Expression

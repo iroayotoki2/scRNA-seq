@@ -86,7 +86,7 @@ Jin S (2026). _CellChat: Inference and analysis of cell-cell communication from 
 
 Li, D., Liu, P., Rahman, I., Zand, M., Pryhuber, G., Dye, T., Goniewicz, M., Gurkar, A. U., Königshoff, M., Eickelberg, O., Mora, A., Rojas, M., Ma, Q., Lugo-Martinez, J., Bar-Joseph, Z., Lanna, S., Finkel, T., & Xie, Z. (2026). Evaluation of statistical differential analysis methods for identification of senescent cells using single-cell transcriptomics. Cell Reports Methods, 6(2), 101264. https://doi.org/10.1016/J.CRMETH.2025.101264
 
-Love, M.I., Huber, W., Anders, S. Moderated estimation of fold change and dispersion for RNA-seq data with DESeq2 Genome Biology 15(12):550 (2014)
+Love, M.I., Huber, W., Anders, S.(2014). Moderated estimation of fold change and dispersion for RNA-seq data with DESeq2 Genome Biology 15(12):550. 
 
 
 Short, K. R., Richard, M., Verhagen, J. H., van Riel, D., Schrauwen, E. J. A., van den Brand, J. M. A., Mänz, B., Bodewes, R., & Herfst, S. (2015). One health, multiple challenges: The inter-species transmission of influenza A virus. One Health, 1, 1. https://doi.org/10.1016/J.ONEHLT.2015.03.001

@@ -3,7 +3,7 @@
 #Submitted by Iroayo Toki
 #April 13th, 2026
 #---------------------
-#Packages Used
+#Packages Used----
 library(dplyr)
 library(Seurat)
 library(celldex)
@@ -15,10 +15,11 @@ library(enrichplot)
 library(clusterProfiler)
 library(org.Mm.eg.db)
 library(CellChat)
+#1. Load in data----
 #Load RDS
 
 Seurat_obj <- readRDS("seurat_ass4.rds")
-
+#2. Quality control----
 #Filtering by mitochondrial DNA percentage
 Seurat_obj[["percent.mt"]] <- PercentageFeatureSet(Seurat_obj, pattern = "^mt-")
 table(Seurat_obj[["percent.mt"]])
@@ -35,13 +36,13 @@ Seurat_obj <- NormalizeData(Seurat_obj, normalization.method = "LogNormalize")
 Seurat_obj <- FindVariableFeatures(Seurat_obj, selection.method = "vst", nfeatures = 2000)
 #Scale
 Seurat_obj<- ScaleData(Seurat_obj)
-
+#3. Data exploration----
 #Running PCA to produce principal components that can be used to cluster our cells
 Seurat_obj <- RunPCA(Seurat_obj, features = VariableFeatures(object = Seurat_obj))
 
 # Visualize the dimensionality of the dataset
 ElbowPlot(Seurat_obj)
-
+#4. Clustering and Unlabelled UMAP----
 # Clustering
 Seurat_obj <- FindNeighbors(Seurat_obj, dims = 1:18)
 Seurat_obj <- FindClusters(Seurat_obj, resolution = 0.5)
@@ -50,7 +51,7 @@ Seurat_obj <- FindClusters(Seurat_obj, resolution = 0.5)
 Seurat_obj <- RunUMAP(Seurat_obj, dims = 1:18)
 DimPlot(Seurat_obj, reduction = "umap", label = TRUE)
 
-
+#5. Annotation(Manual and Automatic)
 #Automatic annotation
 #Calculate average expression
 cluster_avg <- AverageExpression(
@@ -114,13 +115,14 @@ FeaturePlot(Seurat_obj, features = c("Mdga2"))
 new.cluster.ids <- c("Neurons", "Olfactory sensory Neurons", "Macrophages", "Basal Epithelial cells(Respiratory)", "B cells", "Endothileal cells", "Developing Neurons", "Natural killer cells", "Fibroblasts", "Epithelial cells", "Neutrophils", "Monocytes", "Epithelial cells", "Respiratory epithelial cells", "Epithelial cells", "Myeloid Leukocytes(Monocytes Macrophages and DC)", "Epithelial duct cells", "Respiratory Epithelial cells", "Monocytes", "Vascular smooth muscle cells", "Neutrophils", "Proliferating cells", "Secretory epithelial cells", "Epithelial cells", "Immature neurons", "Tear Secreting epithelial cells", "Microvillar Epithelial cells", "Oligodendrocytes", "Osteoblasts", "B cells", "Ciliated Epithelial cells", "Fibroblast", "Proliferating cells", "Epithelial cells",  "Natural killer cells", "Epithelial cells(Hillock)",   "Progenitor cells")
 names(new.cluster.ids) <- levels(Seurat_obj)
 Seurat_obj <- RenameIdents(Seurat_obj, new.cluster.ids)
+#5. UMAP with cluster labels -----
 #Plot with new labels
 DimPlot(Seurat_obj, reduction = "umap", label = TRUE, pt.size = 0.5) + NoLegend()
 Seurat_obj$Cell_types <- Idents(Seurat_obj)
 head(Seurat_obj@meta.data)
 table(Seurat_obj$organ_custom)
 
-
+#6. Exploratory Analysis of cell type(Secretory Epithelial cells)-----
 #Cell type of interest: Secretory epithelial cells
 # Feature plots of identifier genes from the markers dataframe
 head(rownames(markers[markers$cluster == 25, ]), n = 5)
@@ -129,7 +131,7 @@ FeaturePlot(Seurat_obj, features = c("Cyp2g1",  "Sec14l3"))
 FeaturePlot(Seurat_obj, features = c("Cyp1a2", "Muc2"))
 
 
-#Differential Expression
+#7. Differential Expression----
 #Pseudo bulk by disease state, Sample id and cell type
 pseudo_data<- AggregateExpression(Seurat_obj, assays = "RNA", return.seurat = T, group.by = c("disease__ontology_label", "mouse_id", "Cell_types"))
 
@@ -201,8 +203,8 @@ rownames(annotation_col) <- colnames(avg_expr)
 # Plot
 pheatmap(avg_expr,
          annotation_col = annotation_col, cluster_cols = F)
-
-#GO Overrepresentation analysis for biological process and Cell com
+#8. GO ORA(Biological process and cellular component)----
+#GO Overrepresentation analysis for biological process and Cellular communication
 all_genes <- rownames(bulk.secretion.de)
 
 ego_bp <- enrichGO(gene = Sig_genes,
@@ -237,7 +239,7 @@ barplot(ego_bp, showCategory = 15, title = "GO Biological Process")
 
 barplot(ego_cc, showCategory = 15, title = "GO Cellular component")
 
-#Cell-cell communication between the secretory epithelial cells and other cell types
+#9. Cell-cell communication between the secretory epithelial cells and other cell types----
 #Downsample for cellchat (500 per cluster)
 Seurat_obj_cellchat <- subset(
   Seurat_obj,

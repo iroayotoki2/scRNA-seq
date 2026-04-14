@@ -98,7 +98,7 @@ Cell-cell communication analysis was performed to investigate ligand-receptor in
 ![CCC](Plots/Bubble_Plot.jpeg)
 Figure 8. Cell-cell communication analysis of collagen-Syndecan-4 interactions between stromal and secretory epithelial cells. Dot plot displaying predicted ligand-receptor interactions between fibroblasts, osteoblasts, and secretory epithelial cells. The y-axis lists collagen family ligands and Fibronectin (Fn1) paired with the Syndecan-4 (Sdc4) receptor. Dot color represents communication probability (blue = minimum, red = maximum), and all displayed interactions are statistically significant (p < 0.01). Col1a1-Sdc4 and Col1a2-Sdc4 interactions from osteoblasts demonstrated the strongest predicted signaling to secretory epithelial cells.
 # Discussion
-This analysis shows distinct cell types found within small tissue sections and how disease states can affect them. It shows how the effects are seen from the level of the molecular level with the ligands and receptors to the cellular components and the cells within the tissue itself. 
+This analysis shows distinct cell types found within small tissue sections and how disease states can affect them. It shows how the effects are seen from the molecular level with the ligands and receptors to the cellular components and the cells within the tissue itself. 
 
 MUC16 gene was the top expressed gene seen in the analysis and is a  gene that encodes a large, membrane-tethered mucin (MUC16) that acts as part of the apical protective glycocalyx on respiratory epithelial cells. During infections this mucin works alongside secreted mucins (MUC5AC, MUC5B) and other membrane-tethered mucins (MUC1, MUC4) to form a barrier against pathogens. MUC16 is specifically expressed in tracheal surface epithelia, submucosal glands, goblet cells, and ciliated cells within the airway, directly linking it to secretory epithelial cell populations. This supports its increased expression in infected cell populations when compared to normal cell populations (Davies et al., 2007).
 
@@ -120,18 +120,21 @@ Collectively, our findings underscore the central role of mitochondrial function
 
 
 # References
+Afratis, N. A., Nikitovic, D., Multhaupt, H. A., Theocharis, A. D., Couchman, J. R., & Karamanos, N. K. (2017). Syndecans–key regulators of cell signaling and biological functions. The FEBS Journal, 284(1), 27-41.
 
-Aran D, Looney AP, Liu L, Wu E, Fong V, Hsu A, Chak S, Naikawadi RP,
-Wolters PJ, Abate AR, Butte AJ, Bhattacharya M (2019). “Reference-based
-analysis of lung single-cell sequencing reveals a transitional profibrotic macrophage.” _Nat. Immunol._, *20*, 163-172. doi:10.1038/s41590-018-0276-y
+Aran D, Looney AP, Liu L, Wu E, Fong V, Hsu A, Chak S, Naikawadi RP, Wolters PJ, Abate AR, Butte AJ, Bhattacharya M (2019). “Reference-based analysis of lung single-cell sequencing reveals a transitional profibrotic macrophage.” _Nat. Immunol._, *20*, 163-172. doi:10.1038/s41590-018-0276-y
   
 Bouvier, N. M., & Palese, P. (2008). THE BIOLOGY OF INFLUENZA VIRUSES. Vaccine, 26(Suppl 4), D49. https://doi.org/10.1016/J.VACCINE.2008.07.039
+
+Burgess, J. K., Mauad, T., Tjin, G., Karlsson, J. C., & Westergren-Thorsson, G. (2016). The extracellular matrix–the under-recognized element in lung disease? The Journal of Pathology, 240(4), 397-409.
 
 Bridges, H. R., Bill, E., & Hirst, J. (2010). Mössbauer spectroscopy on respiratory complex I: the iron–sulfur cluster ensemble in the NADH-reduced enzyme is partially oxidized. Biochemistry, 51(1), 149-158.
 
 Davies, J. R., Kirkham, S., Svitacheva, N., Thornton, D. J., & Carlstedt, I. (2007). MUC16 is produced in tracheal surface epithelium and submucosal glands and is present in secretions from normal human airway and cultured bronchial epithelial cells. International Journal of Biochemistry and Cell Biology, 39(10), 1943–1954. https://doi.org/10.1016/j.biocel.2007.05.013
 
 Denney, L., & Ho, L. P. (2018). The role of respiratory epithelium in host defence against influenza virus infection. Biomedical Journal, 41(4), 218. https://doi.org/10.1016/J.BJ.2018.08.004
+
+Elfenbein, A., & Bhatt, D. G. (2013). Syndecan-4 signaling at a glance. Journal of Cell Science, 126(17), 3799-3804.
 
 Fontanesi, F., Soto, I. C., Horn, D., & Barrientos, A. (2006). Assembly of mitochondrial cytochrome c-oxidase, a complicated and highly regulated cellular process. American Journal of Physiology-Cell Physiology, 291(6), C1129-C1147.
 
@@ -144,6 +147,7 @@ Jin, S., Plikus, M. V., & Nie, Q. (2024). CellChat for systematic analysis of ce
 
 Jin S (2026). _CellChat: Inference and analysis of cell-cell communication from single-cell and spatial transcriptomics data_. R package version 1.6.1
 
+Kendall, R. T., & Bhatt, C. A. (2015). Fibroblast heterogeneity in the lung. American Journal of Respiratory Cell and Molecular Biology, 52(2), 191-200.
 
 Li, D., Liu, P., Rahman, I., Zand, M., Pryhuber, G., Dye, T., Goniewicz, M., Gurkar, A. U., Königshoff, M., Eickelberg, O., Mora, A., Rojas, M., Ma, Q., Lugo-Martinez, J., Bar-Joseph, Z., Lanna, S., Finkel, T., & Xie, Z. (2026). Evaluation of statistical differential analysis methods for identification of senescent cells using single-cell transcriptomics. Cell Reports Methods, 6(2), 101264. https://doi.org/10.1016/J.CRMETH.2025.101264
 

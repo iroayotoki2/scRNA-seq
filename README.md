@@ -153,6 +153,8 @@ Li, D., Liu, P., Rahman, I., Zand, M., Pryhuber, G., Dye, T., Goniewicz, M., Gur
 
 Love, M.I., Huber, W., Anders, S.(2014). Moderated estimation of fold change and dispersion for RNA-seq data with DESeq2 Genome Biology 15(12):550. 
 
+Ohta, A., & Nishiyama, Y. (2011). Mitochondria and viruses. Mitochondrion, 11(1), 1-12.
+
 Piantadosi, C. A., & Suliman, H. B. (2017). Mitochondrial dysfunction in lung pathogenesis. Annual Review of Physiology, 79, 495-515.
 
 Short, K. R., Richard, M., Verhagen, J. H., van Riel, D., Schrauwen, E. J. A., van den Brand, J. M. A., Mänz, B., Bodewes, R., & Herfst, S. (2015). One health, multiple challenges: The inter-species transmission of influenza A virus. One Health, 1, 1. https://doi.org/10.1016/J.ONEHLT.2015.03.001

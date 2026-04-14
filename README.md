@@ -108,6 +108,8 @@ The observed upregulation of mt-Co1 directly corresponds to the enriched GO Cell
 
 The upregulation of mt-Nd2 and mt-Nd4 is consistent with the enriched GO terms "mitochondrial respiratory chain complex I assembly," "oxidative phosphorylation," and "mitochondrial inner membrane." These genes encode essential subunits of NADH:ubiquinone oxidoreductase (Complex I), the largest complex of the electron transport chain that catalyzes the first step of oxidative phosphorylation by transferring electrons from NADH to ubiquinone (Bridges et al., 2010). Complex I is also a major site of mitochondrial ROS production, linking its upregulation to the observed enrichment of "response to oxygen levels" and "response to oxidative stress" in our analysis. In the context of influenza infection, Complex I activity has been shown to be modulated by viral proteins, with the IAV PB1-F2 protein reported to localize to mitochondria and disrupt mitochondrial membrane potential (Yoshizumi et al., 2014). The increased expression of mt-Nd2 and mt-Nd4 in secretory epithelial cells may represent a compensatory response to maintain cellular energy homeostasis in the face of virus-induced mitochondrial perturbation. 
 
+
+
 # References
 
 Aran D, Looney AP, Liu L, Wu E, Fong V, Hsu A, Chak S, Naikawadi RP,
@@ -116,9 +118,13 @@ analysis of lung single-cell sequencing reveals a transitional profibrotic macro
   
 Bouvier, N. M., & Palese, P. (2008). THE BIOLOGY OF INFLUENZA VIRUSES. Vaccine, 26(Suppl 4), D49. https://doi.org/10.1016/J.VACCINE.2008.07.039
 
+Bridges, H. R., Bill, E., & Hirst, J. (2010). Mössbauer spectroscopy on respiratory complex I: the iron–sulfur cluster ensemble in the NADH-reduced enzyme is partially oxidized. Biochemistry, 51(1), 149-158.
+
 Davies, J. R., Kirkham, S., Svitacheva, N., Thornton, D. J., & Carlstedt, I. (2007). MUC16 is produced in tracheal surface epithelium and submucosal glands and is present in secretions from normal human airway and cultured bronchial epithelial cells. International Journal of Biochemistry and Cell Biology, 39(10), 1943–1954. https://doi.org/10.1016/j.biocel.2007.05.013
 
 Denney, L., & Ho, L. P. (2018). The role of respiratory epithelium in host defence against influenza virus infection. Biomedical Journal, 41(4), 218. https://doi.org/10.1016/J.BJ.2018.08.004
+
+Fontanesi, F., Soto, I. C., Horn, D., & Barrientos, A. (2006). Assembly of mitochondrial cytochrome c-oxidase, a complicated and highly regulated cellular process. American Journal of Physiology-Cell Physiology, 291(6), C1129-C1147.
 
 Hao et al. Dictionary learning for integrative, multimodal and scalable
   single-cell analysis. Nature Biotechnology (2023) [Seurat V5]
@@ -134,6 +140,7 @@ Li, D., Liu, P., Rahman, I., Zand, M., Pryhuber, G., Dye, T., Goniewicz, M., Gur
 
 Love, M.I., Huber, W., Anders, S.(2014). Moderated estimation of fold change and dispersion for RNA-seq data with DESeq2 Genome Biology 15(12):550. 
 
+Piantadosi, C. A., & Suliman, H. B. (2017). Mitochondrial dysfunction in lung pathogenesis. Annual Review of Physiology, 79, 495-515.
 
 Short, K. R., Richard, M., Verhagen, J. H., van Riel, D., Schrauwen, E. J. A., van den Brand, J. M. A., Mänz, B., Bodewes, R., & Herfst, S. (2015). One health, multiple challenges: The inter-species transmission of influenza A virus. One Health, 1, 1. https://doi.org/10.1016/J.ONEHLT.2015.03.001
 
@@ -141,5 +148,8 @@ What is Single Cell Transcriptomics? - Single Cell Discoveries. (n.d.). Retrieve
 
 S Xu, E Hu, Y Cai, Z Xie, X Luo, L Zhan, W Tang, Q Wang, B Liu, R Wang,W Xie, T Wu, L Xie, G Yu. Using clusterProfiler to characterize multiomics data. Nature Protocols. 2024, 19(11):3292-3320
 
+Smallwood, H. S., Duan, S., Morfouace, M., Rezinciuc, S., Shulkin, B. L., Shelat, A., ... & Thomas, P. G. (2017). Targeting metabolic reprogramming by influenza infection for therapeutic intervention. Cell Reports, 19(8), 1640-1653.
+
+Yoshizumi, T., Ichinohe, T., Sasaki, O., Otera, H., Kawabata, S. I., Mihara, K., & Koshiba, T. (2014). Influenza A virus protein PB1-F2 translocates into mitochondria via Tom40 channels and impairs innate immunity. Nature Communications, 5(1), 4713.
 
 Zhang, H., Zhang, W., Zhao, S., Xu, G., Shen, Y., Jiang, F., Qin, A., & Cui, L. (2024). easySCF: a tool for enhancing interoperability between R and Python for efficient single-cell data analysis. Bioinformatics, 40(12). https://doi.org/10.1093/BIOINFORMATICS/BTAE710
